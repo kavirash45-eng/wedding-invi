@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alex & Sophia - Wedding Invitation</title>
+    <meta name="description" content="Join us to celebrate the wedding of Alex and Sophia.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Envelope Section -->
+    <div id="envelope-wrapper" class="active">
+        <div class="envelope">
+            <div class="flap"></div>
+            <div class="body"></div>
+            <div class="card">
+                <h2>Alex & Sophia</h2>
+                <p>Open to View</p>
+            </div>
+            <div class="wax-seal" id="open-envelope-btn"></div>
+        </div>
+        <p class="click-hint">Click the seal to open</p>
+    </div>
+
+    <!-- Main Content Section -->
+    <div id="main-content" class="hidden">
+        <div class="background-overlay"></div>
+        
+        <div class="slides-container">
+            <!-- Slide 1: Welcome -->
+            <div class="slide active" id="slide-1">
+                <div class="glass-panel">
+                    <h1 class="names">Alex & Sophia</h1>
+                    <p class="subtitle">Are getting married!</p>
+                    <p class="intro">We invite you to share in our joy as we exchange vows and begin our new life together.</p>
+                </div>
+            </div>
+
+            <!-- Slide 2: Details -->
+            <div class="slide" id="slide-2">
+                <div class="glass-panel">
+                    <h2 class="section-title">The Details</h2>
+                    <div class="details-grid">
+                        <div class="detail-item">
+                            <h3>When</h3>
+                            <p>Saturday, October 24th, 2026<br>4:00 PM in the Afternoon</p>
+                        </div>
+                        <div class="detail-item">
+                            <h3>Where</h3>
+                            <p>The Grand Rose Gardens<br>123 Blossom Lane, Springville</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 3: Photo Upload (Memorial) -->
+            <div class="slide" id="slide-3">
+                <div class="glass-panel">
+                    <h2 class="section-title">Share the Memories</h2>
+                    <p class="intro">Please share your beautiful photos from our wedding day below.</p>
+                    
+                    <div class="upload-area" id="upload-area">
+                        <input type="file" id="photo-upload" multiple accept="image/*" class="hidden-input">
+                        <label for="photo-upload" class="upload-label">
+                            <span class="upload-icon">📸</span>
+                            <span>Click or drag photos here to upload</span>
+                        </label>
+                    </div>
+                    
+                    <div class="uploaded-gallery" id="uploaded-gallery">
+                        <!-- Uploaded photos will appear here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="controls">
+            <button id="prev-btn" class="nav-btn" disabled>&larr; Prev</button>
+            <div class="dots" id="dots-container"></div>
+            <button id="next-btn" class="nav-btn">Next &rarr;</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
